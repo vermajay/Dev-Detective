@@ -1,0 +1,340 @@
+:root {
+    --lm-bg: #f6f8ff;
+    --lm-bg-content: #fefefe;
+    --lm-text: #4b6a9b;
+    --lm-text-alt: #2b3442;
+    --lm-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+    --lm-shadow-inactive: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
+    --lm-icon-bg: brightness(100%);
+    /* Btn */
+    --btn: #0079ff;
+    --btn-hover: #60abff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--lm-bg);
+}
+.wrapper.dark{
+    background-color: #141D2F;
+}
+
+.container{
+    width: 730px;
+    margin: 0 auto;
+}
+
+.heading-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 10px;
+}
+
+h1{
+    color: var(--lm-text);
+    font-size: 27px;
+}
+
+[mode-button]{
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+[mode-text]{
+    margin-top: 5px;
+    color: var(--lm-text);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.form-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--lm-bg-content);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: var(--lm-shadow);
+    margin-bottom: 20px;
+}
+.form-container.dark{
+    background-color: #1E2A47;
+    box-shadow: rgba(70, 88, 109, 0.15);
+}
+
+[data-searchInput]{
+    all: unset;
+    width: 400px;
+    padding-left: 8px;
+    padding-top: 4px;
+    color: var(--lm-text);
+}
+
+[data-searchInput]::placeholder{
+    font-size: 18px;
+    color: var(--lm-text);
+}
+
+[cross]{
+    color: var(--lm-text);
+    padding-top: 6px;
+    padding-right: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+[searchError]{
+    color: red;
+    display: none;
+}
+[searchError].active{
+    display: flex;
+}
+
+.btn{
+    min-width: 110px;
+    padding: 12px 16px;
+    background-color: var(--btn);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: var(--btn-hover);
+}
+
+.search{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.image-div{
+    min-width: 40px;
+    position: relative;
+}
+
+[search-icon]{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.userInfo-container{
+    background-color: var(--lm-bg-content);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: var(--lm-shadow);
+    display: flex;
+    gap: 10px;
+}
+.userInfo-container.dark{
+    background-color: #1E2A47;
+    box-shadow: rgba(70, 88, 109, 0.15);
+}
+
+.userImage-container{
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 15px;
+}
+
+[user-image]{
+    border-radius: 100%;
+    width: 120px;
+    height: 120px;
+}
+
+.user-data{
+    padding: 30px;
+}
+
+.name{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
+}
+
+[user-name]{
+    color: var(--lm-text-alt);
+    font-weight: 600;
+    font-size: 27px;
+}
+
+[user-joinDate]{
+    color: var(--lm-text);
+}
+
+[user-tag]{
+    color: var(--btn);
+}
+
+.user-para{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    color: var(--lm-text);
+    font-size: 15px;
+    line-height: 1.5rem;
+}
+
+.user-stats{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--lm-bg);
+    padding: 15px;
+    border-radius: 10px;
+}
+.user-stats.dark{
+    background-color: #141d2f;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stats p{
+    font-size: 14px;
+    color: var(--lm-text);
+}
+
+h2{
+    color: var(--lm-text-alt);
+}
+
+.user-links{
+    margin-top: 40px;
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: var(--lm-text);
+}
+
+.link{
+    display: flex;
+    min-width: 200px;
+    gap: 15px;
+}
+
+.bottom-icons{
+    filter: var(--lm-icon-bg);
+}
+
+[website], [twitter]{
+    color: var(--lm-text);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: 100%; /* Set a maximum width */
+    }
+
+    .heading-container {
+        flex-direction: column; /* Adjust heading container for smaller screens */
+        align-items: center;
+        text-align: center;
+        padding-top: 15px; /* Adjust padding */
+        padding-bottom: 15px; /* Adjust padding */
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust font size */
+    }
+
+    [mode-button] {
+        flex-direction: column; /* Adjust mode button layout for smaller screens */
+        text-align: center;
+        gap: 15px;
+    }
+
+    .form-container {
+        flex-direction: column; /* Adjust form container layout for smaller screens */
+        padding: 15px; /* Adjust padding */
+    }
+
+    [data-searchInput] {
+        width: 100%; /* Adjust width */
+        max-width: 100%; /* Set maximum width */
+        margin-bottom: 10px; /* Adjust margin */
+    }
+
+    .image-div {
+        display: none; /* Hide image-div for smaller screens if necessary */
+    }
+
+    .userInfo-container {
+        flex-direction: column; /* Adjust user info container layout for smaller screens */
+        align-items: center;
+        text-align: center;
+    }
+
+    .userImage-container {
+        padding: 15px 0; /* Adjust padding */
+    }
+
+    .user-data {
+        padding: 15px; /* Adjust padding */
+        text-align: center;
+    }
+
+    .user-para {
+        margin-right: 0; /* Reset margin for smaller screens */
+    }
+
+    .user-links {
+        margin: 20px 0; /* Adjust margin */
+        justify-content: center;
+    }
+
+    .bottom-icons {
+        margin-top: 10px; /* Adjust margin */
+    }
+}
